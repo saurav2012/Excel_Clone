@@ -1,0 +1,261 @@
+body {
+  margin: 0;
+  overflow: hidden; /*to hide scroll bar*/
+  font-size: 14;
+}
+
+/* to include border and padding in 100vh*/
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  height: 100vh;
+}
+
+.title-bar {
+  height: 5vh;
+  background-color: #107c41;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  color: white;
+}
+
+.menu-bar {
+  height: 5vh;
+  background-color: #107c41;
+  display: flex;
+}
+
+.menu-item {
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 16;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+.menu-item.selected {
+  background-color: white;
+  color: #107c41;
+}
+
+.menu-item:hover {
+  background-color: #094424;
+  cursor: pointer;
+}
+
+.menu-item.selected:hover {      /*home hover, selection of two sub class*/
+  background-color: white;
+  cursor: default;
+}
+
+.menu-icon-bar {
+  height: 6vh;
+  background-color: rgb(241, 241, 241);
+  display: flex;
+  align-items: center;
+}
+
+.menu-icon {
+  padding-left: 10px; /*gap between neighbour*/
+  padding-right: 10px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.selector {
+  height: 30px;
+  font-size: 16px;
+}
+
+.selector option {   /*font type selector*/
+  font-size: 16px;
+}
+
+.font-family-selector {
+  width: 150px;
+}
+
+.menu-icon:hover {
+  background-color: lightgray;
+  cursor: pointer;
+}
+
+.formula-bar {
+  height: 5vh;
+  display: flex;
+  align-items: center;
+  padding-left: 0.7em;
+  padding-right: 0.7em;
+  background-color: rgb(241, 241, 241);
+}
+
+.formula-editor{
+  height: 70%;
+  border: 1px solid lightgray;
+  background-color: white;
+  padding-left: 0.7em;
+  padding-right: 0.7em;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+}
+
+.selected-cell{
+  width: 120px;
+}
+
+.formula-sign{
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.formula-input
+{
+  width: calc(100vw - 160px);
+  outline-color: #107c41;
+}
+
+.data-container {
+  height: 75vh;
+  display: flex;
+  flex-wrap: wrap;  /*avoid placement of animal in one line*/
+}
+
+.select-all {
+  width: 30px;
+  height: 30px;
+  border: 1px solid lightgray;
+}
+
+.column-name-container {
+  height: 30px;
+  width: calc(100vw - 30px);
+  border: 1px solid lightgray;
+  display: flex;
+  overflow: hidden;
+}
+
+.column-name {
+  min-width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* by default horizontal alignment*/
+  border-right: 1px solid lightgray;
+  font-weight: bold;
+}
+
+.row-name-container {
+  width: 30px;
+  height: calc(75vh - 30px);
+  border: 1px solid lightgray;
+  overflow: hidden;
+}
+
+.row-name {
+  min-height: 29.4px;   
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: 1px solid lightgray;
+  font-weight: bold;
+}
+
+.input-cell-container {
+  width: calc(100vw - 30px);
+  height: calc(75vh - 30px);
+  border: 1px solid lightgray;
+  overflow: scroll;
+}
+
+.cell-row {
+  display: flex;
+}
+
+.input-cell {
+  min-width: 100px;
+  min-height: 29.4px;
+  border-right: 1px solid lightgray;
+  border-bottom: 1px solid lightgray;
+  outline-color: #107c41;
+}
+
+
+.input-cell, .sheet-bar {
+  height: 4vh;
+  display: flex;
+  align-items: center;
+}
+
+.icon-add {
+  color: #107c41;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 40px;
+}
+
+.icon-add:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+.icon-left-scroll,
+.icon-right-scroll {
+  font-size: 30px;
+}
+
+.icon-left-scroll:hover,
+.icon-right-scroll:hover {
+  background-color: lightgray;
+  cursor: pointer;
+}
+.sheet-tab {
+  border-bottom: 4px solid #107c41;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  border-right: 1px solid lightgray;
+}
+
+.sheet-tab-container {
+  border: 1px solid lightgray;
+  width: calc(100vw - 110px);
+}
+.sheet-tab:hover {
+  cursor: default;
+}
+.scroller {
+  width: 70px;
+}
+.menu-icon.selected
+{
+  background-color: lightgray;
+  /* border: 0.5px solid rgb(199, 186, 186); */
+  /* border-right: 0.5px solid rgb(199, 186, 186); */
+}
+
+.top-cell-selected{
+      border-top: none;
+}
+.bottom-cell-selected{
+      border-bottom: 1px solid lightgray;
+}
+.right-cell-selected{
+      border-right: 1px solid lightgray;
+}
+
+.left-cell-selected{
+      border-left: none;
+}
